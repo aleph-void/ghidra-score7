@@ -1,11 +1,21 @@
 ##VERSION: 2.0
 ##MODULE IP: Apache License 2.0
+.gitignore||GHIDRA||||END|
+CREDITS.md||GHIDRA||||END|
+GHIDRA-RARE.md||GHIDRA||||END|
+LICENSE||GHIDRA||||END|
 Module.manifest||GHIDRA||||END|
+README.md||GHIDRA||||END|
+build.gradle||GHIDRA||||END|
+data/buildLanguage.xml||GHIDRA||||END|
 data/languages/SCORE7.cspec||GHIDRA||||END|
 data/languages/SCORE7.dwarf||GHIDRA||||END|
 data/languages/SCORE7.ldefs||GHIDRA||||END|
 data/languages/SCORE7.opinion||GHIDRA||||END|
 data/languages/SCORE7.pspec||GHIDRA||||END|
 data/languages/SCORE7.sinc||GHIDRA||||END|
+data/languages/SCORE7_16.sinc||GHIDRA||||END|
 data/languages/SCORE7_be.slaspec||GHIDRA||||END|
 data/languages/SCORE7_le.slaspec||GHIDRA||||END|
+data/sleighArgs.txt||GHIDRA||||END|
+extension.properties||GHIDRA||||END|
