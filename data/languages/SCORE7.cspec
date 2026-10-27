@@ -1,4 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<!-- Calling convention of GCC 4.5.4 (score-elf), checked by compiling test functions in both byte
+     orders: arguments in r4-r7 (64-bit values in an even/odd pair, high word in the lower
+     register), further arguments on the stack from r0+16 (the callee's home area for r4-r7);
+     results in r4 (r4:r5 for 64-bit values, high word in r4); r2 and r12-r21 preserved; r3 is
+     the link register. -->
 <compiler_spec>
   <data_organization>
     <absolute_max_alignment value="0"/>
@@ -36,7 +41,7 @@
         <pentry minsize="1" maxsize="4" extension="inttype"><register name="r5"/></pentry>
         <pentry minsize="1" maxsize="4" extension="inttype"><register name="r6"/></pentry>
         <pentry minsize="1" maxsize="4" extension="inttype"><register name="r7"/></pentry>
-        <pentry minsize="1" maxsize="500" align="4"><addr offset="4" space="stack"/></pentry>
+        <pentry minsize="1" maxsize="500" align="4"><addr offset="16" space="stack"/></pentry>
         <rule>
           <datatype name="any"/>
           <varargs first="0"/>
@@ -49,7 +54,7 @@
       </input>
       <output killedbycall="true">
         <pentry minsize="1" maxsize="4" extension="inttype"><register name="r4"/></pentry>
-        <pentry minsize="5" maxsize="8"><addr space="join" piece1="r5" piece2="r4"/></pentry>
+        <pentry minsize="5" maxsize="8"><addr space="join" piece1="r4" piece2="r5"/></pentry>
         <rule>
           <datatype name="any" minsize="9"/>
           <hidden_return/>
